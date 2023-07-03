@@ -105,4 +105,6 @@ const TextEditor = (props) => {
   )
 }
 
+TextEditor.displayName = 'TextEditor'
+
 export default TextEditor
