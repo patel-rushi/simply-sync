@@ -21,18 +21,21 @@ export default function AppIndex() {
   const [debouncedSubdomain] = useDebounce(subdomain, 1500)
   const [error, setError] = useState(null)
 
-  useEffect(async () => {
-    if (debouncedSubdomain.length > 0) {
-      const response = await fetch(
-        `/api/check-subdomain?subdomain=${debouncedSubdomain}`
-      )
-      const available = await response.json()
-      if (available) {
-        setError(null)
-      } else {
-        setError(`${debouncedSubdomain}.vercel.im`)
+  useEffect(() => {
+    async function checkSubdomain() {
+      if (debouncedSubdomain.length > 0) {
+        const response = await fetch(
+          `/api/check-subdomain?subdomain=${debouncedSubdomain}`
+        )
+        const available = await response.json()
+        if (available) {
+          setError(null)
+        } else {
+          setError(`${debouncedSubdomain}.vercel.im`)
+        }
       }
     }
+    checkSubdomain()
   }, [debouncedSubdomain])
 
   const router = useRouter()
