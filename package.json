@@ -56,6 +56,7 @@
     "postcss": "^8.4.21",
     "prisma": "^3.15.2",
     "tailwindcss": "^3.2.7",
-    "turbo": "^1.8.3"
+    "turbo": "^1.8.3",
+    "turbo-ignore": "^1.10.7"
   }
 }

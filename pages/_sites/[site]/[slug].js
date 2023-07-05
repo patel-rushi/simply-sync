@@ -150,7 +150,7 @@ export async function getStaticPaths() {
   )
 
   return {
-    paths: data.flatMap((post) => {
+    paths: data ? data.flatMap((post) => {
       const params = []
 
       if (post.site.subdomain) {
@@ -163,7 +163,7 @@ export async function getStaticPaths() {
         })
       }
       return params
-    }),
+    }) : [],
     fallback: true,
   }
 }

@@ -18,12 +18,15 @@ const isMarkActive = (editor, format) => {
   return marks ? marks[format] === true : false
 }
 
-const Button = React.forwardRef(({ active, ...children }) => (
+const Button = React.forwardRef(({ active, ...children }, ref) => (
   <span
     {...children}
     className={`${active && 'font-bold'} cursor-pointer mr-3 p-1`}
+    ref={ref}
   />
 ))
+
+Button.displayName = "Button";
 
 const TextEditor = (props) => {
   const [value, setValue] = useState(props.initialValue)
@@ -60,6 +63,8 @@ const TextEditor = (props) => {
       </Button>
     )
   }
+
+  ToolbarButton.displayName = "ToolbarButton";
 
   return (
     <Slate editor={editor} value={value} onChange={(value) => setValue(value)}>

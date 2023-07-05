@@ -1,5 +1,6 @@
 import { signIn } from 'next-auth/react'
 import Head from 'next/head'
+import Image from 'next/image'
 import { useState } from 'react'
 import LoadingDots from '@/components/app/loading-dots'
 
@@ -40,10 +41,12 @@ export default function Login() {
         <meta name="twitter:image" content={logo} />
       </Head>
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <img
-          className="mx-auto h-12 w-auto"
+        <Image
+          className="mx-auto"
           src="/logo.png"
           alt="Platforms Starter Kit"
+          width={200}
+          height={50}
         />
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Platforms Starter Kit

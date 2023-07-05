@@ -98,11 +98,16 @@ export async function getStaticPaths() {
   const { data } = await supabase.from('site').select('subdomain, customDomain')
 
   const subdomains = data
-    .filter((site) => site.subdomain)
-    .map((site) => site.subdomain)
-  const domains = data
-    .filter((site) => site.customDomain)
-    .map((site) => site.customDomain)
+    ? data
+        .filter((site) => site && site.subdomain)
+        .map((site) => site.subdomain)
+    : [];
+const domains = data
+    ? data
+        .filter((site) => site && site.customDomain)
+        .map((site) => site.customDomain)
+    : [];
+
 
   const allPaths = [...subdomains, ...domains]
   return {
