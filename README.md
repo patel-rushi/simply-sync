@@ -20,7 +20,7 @@ relatedTemplates:
 </p>
 
 <p align="center">
-Build a blogging platform based on Slate.js, Supabase and Vercel.
+Simply Sync - Stay motivated by keeping track of all your job application.
 <br/>
 
 ## Deploy Your Own
