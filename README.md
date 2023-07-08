@@ -15,12 +15,12 @@ relatedTemplates:
 <p align="center">
   <a href="https://vercel.com/platforms">
     <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
-    <h3 align="center">Platforms Starter Kit</h3>
+    <h3 align="center">Simply Sync</h3>
   </a>
 </p>
 
 <p align="center">
-Simply Sync - Stay motivated by keeping track of all your job application.
+Stay motivated by keeping track of all your job application.
 <br/>
 
 ## Deploy Your Own
