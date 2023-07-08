@@ -16,6 +16,7 @@ Stay motivated and organized by diligently tracking all your job applications.
 ## Demo
 
 [https://simply-sync.vercel.app/app/login](https://simply-sync.vercel.app/app/login)
+<br/>
 [https://app.vercel.im/](https://app.vercel.im/)
 
 ## Differences with Platforms guide:
