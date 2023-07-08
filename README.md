@@ -20,7 +20,7 @@ relatedTemplates:
 </p>
 
 <p align="center">
-Stay motivated by keeping track of all your job application.
+Stay motivated and organized by diligently tracking all your job applications.
 <br/>
 
 ## Deploy Your Own
