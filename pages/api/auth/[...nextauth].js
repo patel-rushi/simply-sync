@@ -1,9 +1,10 @@
 import NextAuth from 'next-auth'
-import Github from 'next-auth/providers/github'
+import Google from 'next-auth/providers/google'
 
 const options = {
   providers: [
-    Github({
+    Google({
+      //Change this to Google Client ID and Secret
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
