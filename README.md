@@ -9,13 +9,13 @@
 Stay motivated and organized by diligently tracking all your job applications.
 <br/>
 
+## Live at:
+
+[Simply Sync](https://simply-sync.vercel.app)
+
 ## Deploy Your Own
 
 [Read the guide Platforms guide](https://vercel.com/guides/nextjs-multi-tenant-application) This solution builds upon this guide. The differences will be explained down bellow.
-
-## Live
-
-[https://simply-sync.vercel.app](https://simply-sync.vercel.app)
 
 ## Differences with Platforms guide:
 
