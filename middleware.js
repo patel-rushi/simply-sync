@@ -35,9 +35,10 @@ export default function middleware(req) {
       : hostname.replace(`.localhost:3000`, "");
 
   if (!url.pathname.includes(".") && !url.pathname.startsWith("/api")) {
-    if (currentHost == "app") {
+    if (url.pathname = "/") {
+      //If user is logged in, redirect to dashboard
       if (
-        url.pathname === "/login" &&
+        url.pathname === "/app/login" &&
         (req.cookies.get("next-auth.session-token") ||
           req.cookies.get("__Secure-next-auth.session-token"))
       ) {
@@ -45,6 +46,16 @@ export default function middleware(req) {
         return NextResponse.redirect(url);
       }
 
+      //If user is not logged in, redirect to login page
+      if (
+        url.pathname === "/" &&
+        (!req.cookies.get("next-auth.session-token") ||
+          !req.cookies.get("__Secure-next-auth.session-token"))
+      ) {
+        url.pathname = "/app/login";
+        return NextResponse.redirect(url);
+      }
+      //ToDO: Check if below code is needed
       url.pathname = `/app${url.pathname}`;
       return NextResponse.rewrite(url);
     }
@@ -53,7 +64,7 @@ export default function middleware(req) {
       hostname === "localhost:3000" ||
       hostname === "platformize.vercel.app"
     ) {
-      url.pathname = `/home${url.pathname}`;
+      url.pathname = `/${url.pathname}`;
       return NextResponse.rewrite(url);
     }
 
