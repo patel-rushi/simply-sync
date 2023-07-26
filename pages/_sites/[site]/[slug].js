@@ -181,7 +181,7 @@ export async function getStaticProps({ params: { site, slug } }) {
     )
     .eq('slug', slug)
 
-  if (data.length === 0) {
+  if (!data || data.length === 0) {
     return { notFound: true, revalidate: 10 }
   }
 
