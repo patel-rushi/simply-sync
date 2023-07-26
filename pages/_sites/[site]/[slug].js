@@ -81,7 +81,7 @@ export default function Post(props) {
     description: data.description,
     ogUrl: `https://${data.site.subdomain}.vercel.im/${data.slug}`,
     ogImage: data.image,
-    logo: '/logo.png',
+    logo: '/logo4.png',
   }
 
   return (
@@ -181,7 +181,7 @@ export async function getStaticProps({ params: { site, slug } }) {
     )
     .eq('slug', slug)
 
-  if (data.length === 0) {
+  if (!data || data.length === 0) {
     return { notFound: true, revalidate: 10 }
   }
 

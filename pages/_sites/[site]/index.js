@@ -22,13 +22,13 @@ export default function Index(props) {
       ? data.customDomain
       : `https://${data.subdomain}.vercel.im`,
     ogImage: data.image,
-    logo: '/logo.png',
+    logo: '/logo4.png',
   }
 
   return (
     <Layout meta={meta} subdomain={data.subdomain}>
       <div className="w-full mb-20">
-        {data.posts.length > 0 ? (
+        {data && data.posts && data.posts.length > 0 ? (
           <div className="w-full max-w-screen-xl lg:w-5/6 mx-auto md:mb-28">
             <Link href={`/${data.posts[0].slug}`}>
 
@@ -78,7 +78,7 @@ export default function Index(props) {
         )}
       </div>
 
-      {data.posts.length > 1 && (
+      {data && data.posts && data.posts.length > 1 && (
         <div className="mx-5 lg:mx-24 2xl:mx-auto mb-20 max-w-screen-xl">
           <h2 className="font-cal text-4xl md:text-5xl mb-10">More stories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 w-full">
@@ -132,7 +132,7 @@ export async function getStaticProps({ params: { site } }) {
 
   const { data } = await supabase.from('site').select('*').eq(eq, site)
 
-  if (data.length === 0) {
+  if (!data || data.length === 0) {
     return { notFound: true, revalidate: 10 }
   }
 

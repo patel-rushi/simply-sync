@@ -11,7 +11,7 @@ export default function Layout({ siteId, children }) {
   const title = 'Platforms on Vercel'
   const description =
     'Create a fullstack application with multi-tenancy and custom domains support using Next.js, Supabase, and PostgreSQL'
-  const logo = '/favicon.ico'
+  const logo = '/favicon2.ico'
   const router = useRouter()
   const sitePage = router.pathname.startsWith('/app/site/[id]')
   const postPage = router.pathname.startsWith('/app/post/[id]')
