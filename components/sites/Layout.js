@@ -30,7 +30,7 @@ export default function Layout({ meta, children, subdomain }) {
     <div>
       <Head>
         <title>{meta?.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon2.ico" />
         <link rel="shortcut icon" type="image/x-icon" href={meta?.logo} />
         <link rel="apple-touch-icon" sizes="180x180" href={meta?.logo} />
         <meta name="theme-color" content="#7b46f6" />

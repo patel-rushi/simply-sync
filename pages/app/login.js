@@ -5,7 +5,7 @@ import { useState } from 'react'
 import LoadingDots from '@/components/app/loading-dots'
 
 const pageTitle = 'Login'
-const logo = '/favicon.ico'
+const logo = '/favicon2.ico'
 const description =
   'Simply Sync'
 
@@ -43,7 +43,7 @@ export default function Login() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Image
           className="mx-auto"
-          src="/logo.png"
+          src="/logo4.png"
           alt="Simply Sync"
           width={200}
           height={50}

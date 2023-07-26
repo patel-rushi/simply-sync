@@ -81,7 +81,7 @@ export default function Post(props) {
     description: data.description,
     ogUrl: `https://${data.site.subdomain}.vercel.im/${data.slug}`,
     ogImage: data.image,
-    logo: '/logo.png',
+    logo: '/logo4.png',
   }
 
   return (

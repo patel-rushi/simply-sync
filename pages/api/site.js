@@ -34,7 +34,7 @@ export default async function site(req, res) {
         name,
         description,
         subdomain: sub.length > 0 ? sub : cuid(),
-        logo: '/logo.png',
+        logo: '/logo4.png',
         image: `/placeholder.png`,
         userId,
       })

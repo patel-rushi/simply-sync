@@ -22,7 +22,7 @@ export default function Index(props) {
       ? data.customDomain
       : `https://${data.subdomain}.vercel.im`,
     ogImage: data.image,
-    logo: '/logo.png',
+    logo: '/logo4.png',
   }
 
   return (
