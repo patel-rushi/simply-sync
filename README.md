@@ -13,11 +13,9 @@ Stay motivated and organized by diligently tracking all your job applications.
 
 [Read the guide Platforms guide](https://vercel.com/guides/nextjs-multi-tenant-application) This solution builds upon this guide. The differences will be explained down bellow.
 
-## Demo
+## Live
 
-[https://simply-sync.vercel.app/app/login](https://simply-sync.vercel.app/app/login)
-<br/>
-[https://app.vercel.im/](https://app.vercel.im/)
+[https://simply-sync.vercel.app](https://simply-sync.vercel.app)
 
 ## Differences with Platforms guide:
 
